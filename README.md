@@ -40,10 +40,8 @@ On Linux
 #### Setting Environmental Variables
 The following variables must be set:
 ```
-export CUDNN_INCLUDE_DIR=<path of directory where cudnn.h is located>
-```
-```
-export CUDNN_LIBRARY=<path of static cudnn library>
+export CUDNN_INCLUDE_DIR=<path of directory where cudnn.h is located>  # /usr/include
+export CUDNN_LIBRARY=<path of static cudnn library>  # /usr/local/cuda-11.6/lib64
 ```
 These variables let Pytorch know where to look for CuDNN files during installation.
 ```
