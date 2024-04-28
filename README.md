@@ -45,7 +45,7 @@ export CUDNN_LIBRARY=<path of static cudnn library>  # /usr/local/cuda-11.6/lib6
 ```
 These variables let Pytorch know where to look for CuDNN files during installation.
 ```
-export TORCH_CUDA_ARCH_LIST="6.1+PTX"
+export TORCH_CUDA_ARCH_LIST="8.0+PTX"  # 7.0 for V100, 8.0 for A100, 9.0 for H100
 ```
 This variable sets the sm and compute flags used to build anything CUDA related. Without setting it, a script will be ran to to probe the GPU for it. It is unclear if the GPU-probing library will use GPGPU-Sim or hardware, but it cannot detect GPGPU-Sim configuration file anyways. If it does not detect any GPUs, it defaults to a full list, which includes “6.1+PTX” (the flag we want.) Manually setting this will reduce the number of PTX files required to parse later.
 #### Installing Dependent Libraries
