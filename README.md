@@ -44,6 +44,7 @@ export CUDNN_INCLUDE_DIR=<path of directory where cudnn.h is located>  # /usr/in
 export CUDNN_LIBRARY=<path of static cudnn library>  # /usr/local/cuda-11.6/lib64
 ```
 These variables let Pytorch know where to look for CuDNN files during installation.
+(https://developer.nvidia.com/cuda-gpus)
 ```
 export TORCH_CUDA_ARCH_LIST="8.0+PTX"  # 7.0 for V100, 8.0 for A100, 9.0 for H100
 ```
